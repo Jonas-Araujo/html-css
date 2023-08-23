@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Imagens</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* 100% da altura da viewport */
+            overflow: hidden; /* Impede a barra de rolagem */
+            position: relative; /* Define o contexto de posicionamento para os elementos filhos */
+        }
+
+        /* Imagem de fundo ocupando toda a viewport */
+        .background-image img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Imagem PNG centralizada */
+        .center-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <img src="imagens/espaco.jpg" alt="Imagem de Fundo">
+    </div>
+    <div class="center-image">
+        <img src="imagens/astronauta.png" alt="Imagem Centralizada">
+    </div>
+</body>
+</html>
