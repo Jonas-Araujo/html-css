@@ -1,83 +1,117 @@
+/* Define a codificação de caracteres para UTF-8 para suportar caracteres especiais */
 @charset "UTF-8";
 
+/* Importa fontes do Google Fonts para uso posterior no CSS */
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
+/* Define variáveis de cores e fontes para reutilização em todo o CSS */
 :root {
-    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
-    --fonte2: 'Passion One', cursive;
-    --fonte3: 'Sriracha', cursive;
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif; /* Define uma pilha de fontes */
+    --fonte2: 'Passion One', cursive; /* Define uma fonte alternativa */
+    --fonte3: 'Sriracha', cursive; /* Define outra fonte alternativa */
 }
 
+/* Aplica um conjunto de estilos padrão a todos os elementos */
 * {
-    margin: 0;
-    padding: 0;
-    font-size: 1em;
+    margin: 0; /* Remove margens padrão em todos os elementos */
+    padding: 0; /* Remove preenchimento padrão em todos os elementos */
+    font-size: 1em; /* Define o tamanho da fonte padrão como 1em */
 }
 
+/* Estilos para o elemento html e body */
 html, body {
-    min-height: 100vh;
-    background-color: dark;
-    font-family: var(--fonte1);
+    min-height: 100vh; /* Define a altura mínima como 100% da altura da viewport */
+    background-color: dark; /* Define a cor de fundo */
+    font-family: var(--fonte1); /* Usa a fonte definida na variável --fonte1 */
 }
 
+/* Estilos para o cabeçalho (header) */
 header {
-    background-color: black;
-    color: white;
-    text-align: center;
+    background-color: black; /* Define a cor de fundo do cabeçalho como preto */
+    color: white; /* Define a cor do texto no cabeçalho como branco */
+    text-align: center; /* Centraliza o texto horizontalmente dentro do cabeçalho */
 }
 
+/* Estilos para o título no cabeçalho */
 header > h1 {
-    padding-top: 50px;
-    /* text-transform: uppercase; */
-    font-variant: small-caps;
-    font-family: var(--fonte2);
-    font-size: 10vh;
+    padding-top: 50px; /* Adiciona espaço superior de 50 pixels para separar o título */
+    /* text-transform: uppercase; Transformaria o texto em letras maiúsculas */
+    font-variant: small-caps; /* Usa variantes de letras pequenas (small-caps) para o texto */
+    font-family: var(--fonte2); /* Usa a fonte definida na variável --fonte2 para o título */
+    font-size: 10vh; /* Define o tamanho da fonte do título como 10% da altura da viewport (tamanho relativo à altura da janela) */
 }
 
+/* Estilos para parágrafos no cabeçalho */
 header > p {
-    padding-bottom: 50px;
+    padding-bottom: 50px; /* Adiciona espaço inferior de 50 pixels para separar os parágrafos */
 }
 
+/* Estilos para links no cabeçalho e rodapé */
 header a, footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bolder;
+    color: white; /* Define a cor do texto dos links como branco */
+    text-decoration: none; /* Remove a decoração de texto dos links (sublinhado) */
+    font-weight: bolder; /* Define a espessura da fonte dos links como mais ousada (negrito) */
 }
 
+/* Estilos para links no cabeçalho e rodapé ao passar o mouse */
 header a:hover, footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Adiciona uma linha de sublinhado aos links ao passar o mouse */
 }
 
+/* Estilos para seções do conteúdo */
 section {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
-    padding-left: 30px;
-    font-family: var(--fonte3);
-    font-size: 3.5vh;
+    padding-top: 10vh; /* Adiciona espaço superior de 10% da altura da viewport */
+    padding-bottom: 10vh; /* Adiciona espaço inferior de 10% da altura da viewport */
+    line-height: 2em; /* Define a altura da linha como o dobro do tamanho da fonte */
+    padding-left: 30px; /* Adiciona espaço à esquerda de 30 pixels */
+    font-family: var(--fonte3); /* Usa a fonte definida na variável --fonte3 */
+    font-size: 3.5vh; /* Define o tamanho da fonte como 3.5% da altura da viewport */
 }
 
+/* Estilos para parágrafos dentro de seções */
+section > p {
+    padding-bottom: 2em; /* Adiciona espaço inferior de 2 vezes a altura da linha entre os parágrafos */
+}
+
+/* Estilos para seções normais */
 section.normal {
-    background-color: white;
-    color: black;
+    background-color: white; /* Define a cor de fundo das seções normais como branco */
+    color: black; /* Define a cor do texto dentro das seções normais como preto */
 }
 
+/* Estilos para seções de imagem */
 section.imagem {
-    background-color: rgb(51, 51, 51);
-    color: white;
+    background-color: rgb(51, 51, 51); /* Define a cor de fundo das seções de imagem */
+    color: white; /* Define a cor do texto dentro das seções de imagem como branco */
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473); /* Aplica uma sombra interna à seção */
+    background-size: cover; /* Define que a imagem de fundo deve cobrir toda a área disponível */
+    background-attachment: fixed; /* Mantém a imagem de fundo fixa à medida que a página é rolada */
 }
 
+/* Estilos para parágrafos dentro de seções de imagem */
 section.imagem > p {
-    display: inline-block;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.253);
+    display: inline-block; /* Define os parágrafos como elementos de bloco inline */
+    padding: 5px; /* Adiciona preenchimento interno de 5 pixels aos parágrafos */
+    background-color: rgba(0, 0, 0, 0.514); /* Define uma cor de fundo com transparência para os parágrafos */
+    text-shadow: 1px 1px 0px black; /* Adiciona uma sombra de texto aos parágrafos */
 }
 
+/* Estilos para a primeira seção de imagem com fundo específico */
+section#img01 {
+    background-image: url('../imagens/background001.jpg'); /* Define a imagem de fundo para esta seção */
+    background-position: right center; /* Posiciona a imagem de fundo à direita e centralizada verticalmente */
+}
+
+/* Estilos para a segunda seção de imagem com fundo específico */
+section#img02 {
+    background-image: url('../imagens/background002.jpg'); /* Define a imagem de fundo para esta seção */
+}
+
+/* Estilos para o rodapé */
 footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    background-color: black; /* Define a cor de fundo do rodapé como preto */
+    color: white; /* Define a cor do texto no rodapé como branco */
+    text-align: center; /* Centraliza o texto horizontalmente dentro do rodapé */
+    padding: 10px; /* Adiciona preenchimento interno de 10 pixels ao redor do conteúdo do rodapé */
 }
